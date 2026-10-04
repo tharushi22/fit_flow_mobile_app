@@ -1,56 +1,106 @@
-# Welcome to your Expo app 👋
+# FitFlow – Smart AI Fitness Companion 🏋️‍♀️✨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![React Native](https://img.shields.io/badge/React_Native-0.86.3-61DAFB?logo=react&logoColor=white)](https://reactnative.dev/)
+[![Expo SDK](https://img.shields.io/badge/Expo_SDK-57.0-000020?logo=expo&logoColor=white)](https://expo.dev/)
+[![Android](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84?logo=android&logoColor=white)](https://android.com)
+[![Build](https://img.shields.io/badge/Build-v1.0.1%20(Code%202)-6C4BFF)](#)
+[![License](https://img.shields.io/badge/License-Academic%20Evaluation-blue.svg)](#)
 
-## Get started
+FitFlow is an intelligent mobile fitness companion designed to empower users with personalized workout splits, interactive macro & hydration tracking, dynamic volume analytics, and an active fitness community.
 
-1. Install dependencies
+**GitHub Repository:** [https://github.com/tharushi22/fit_flow_mobile_app](https://github.com/tharushi22/fit_flow_mobile_app)
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📱 Key Features
 
-   ```bash
-   npx expo start
-   ```
+- **Personalized Onboarding**: Tailored fitness goal setup, activity level assessment, and health preference onboarding.
+- **Dynamic Home Dashboard**: Live activity rings, calories burned, heart rate tracking, and quick access to daily workouts.
+- **AI Workout Planner**: Intelligent 7-day training routine generator with goal, intensity, and duration parameters.
+- **Nutrition & Hydration Logger**: Real-time water tracking, calorie counting, and macronutrient balance (Protein, Carbs, Fats).
+- **Progress & Volume Analytics**: Interactive weekly and monthly volume tracking, consistency streak counters, and milestone records.
+- **Community Feed & Social Sharing**: Workout kudos/likes, motivational posts, user comments, and fitness leaderboards.
+- **Privacy & Safety First**: Comprehensive in-app Privacy Policy, Apple Review Guideline 1.4 compliance, and transparent data practices.
+- **Modern Android 15 & Adaptive Icon**: Full adaptive icon safe-zone alignment, splash screen with official Android branding, and standalone offline execution.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Technology Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Framework**: React Native 0.86.3
+- **Platform**: Expo SDK 57 (Expo Router file-based navigation)
+- **Languages**: TypeScript, React, Java/Kotlin (Android Native)
+- **Styling**: React Native StyleSheet, LinearGradient, Vector Icons
+- **Build System**: Android Gradle 9.3.1 / AGP 8.8.2 / R8 ProGuard Minification
+- **Cryptographic Signing**: Android Keystore (RSA 2048-bit, APK Signature Scheme v2)
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v20+ recommended)
+- Android SDK (API 34/35/36) & Android Studio
+- PowerShell or Bash
+
+### Installation
 
 ```bash
-npm run reset-project
+# Clone the repository
+git clone https://github.com/tharushi22/fit_flow_mobile_app.git
+cd fit_flow_mobile_app
+
+# Install project dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Running Locally
 
-### Other setup steps
+```bash
+# Start the Metro bundler
+npx expo start
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+# Run directly on an active Android emulator / connected device
+npx expo run:android
+```
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📦 Production Builds (Signed APK & AAB)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# 1. Export offline JavaScript bundle
+npx expo export:embed --entry-file node_modules/expo-router/entry.js \
+  --platform android --dev false \
+  --bundle-output android/app/src/main/assets/index.android.bundle \
+  --assets-dest android/app/src/main/res/
 
-## Join the community
+# 2. Build signed release APK
+cd android
+./gradlew.bat app:assembleRelease
 
-Join our community of developers creating universal apps.
+# 3. Build signed Google Play App Bundle (AAB)
+./gradlew.bat app:bundleRelease
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Signed Release APK**: `android/app/build/outputs/apk/release/app-release.apk`
+- **Signed Release AAB**: `android/app/build/outputs/bundle/release/app-release.aab`
+
+---
+
+## 📄 Documentation & Reports
+
+- **Comprehensive Lab Report (DOCX)**: [`doc/IT3060_Lab06_FitFlow_Final_Report.docx`](doc/IT3060_Lab06_FitFlow_Final_Report.docx)
+- **Submission Portfolio (Markdown)**: [`LAB_REPORT_IT3060.md`](LAB_REPORT_IT3060.md)
+- **Privacy Policy**: [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md) | [`docs/privacy-policy.html`](docs/privacy-policy.html)
+- **Release Notes v1.0.1**: [`RELEASE_NOTES.md`](RELEASE_NOTES.md)
+- **Store Assets & Graphics**: [`store_assets/`](store_assets/)
+
+---
+
+## 👥 Authors & Academic Record
+
+- **Course Module**: IT3060 – Human Computer Interaction
+- **Academic Term**: Year 3 / Semester 2 – 2026
+- **Project Team**: FitFlow Development Team

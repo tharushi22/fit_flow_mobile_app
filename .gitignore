@@ -38,6 +38,14 @@ yarn-error.*
 
 example
 
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Backups
+*_BACKUP.*
+
 # generated native folders
 /ios
 /android
