@@ -45,6 +45,19 @@ export default function HomeScreen({ onNavigate, onStartWorkout }: HomeScreenPro
           </View>
         </View>
 
+        {/* Promotional / Feature Banner */}
+        <TouchableOpacity
+          style={styles.promoBannerCard}
+          activeOpacity={0.88}
+          onPress={() => onNavigate('plan')}
+        >
+          <Image
+            source={require('../../assets/images/banner.png')}
+            style={styles.promoBannerImage}
+            resizeMode="cover"
+          />
+        </TouchableOpacity>
+
         {/* Hero Section: Today's Flow */}
         <View style={styles.heroCard}>
           <LinearGradient
@@ -394,6 +407,25 @@ const styles = StyleSheet.create({
   avatarLogoImage: {
     width: 32,
     height: 32,
+  },
+  promoBannerCard: {
+    width: '100%',
+    aspectRatio: 1080 / 500,
+    borderRadius: 20,
+    overflow: 'hidden',
+    marginBottom: 20,
+    backgroundColor: '#0B0F1A',
+    shadowColor: '#6C4CF5',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.25,
+    shadowRadius: 14,
+    elevation: 6,
+    borderWidth: 1,
+    borderColor: '#1E293B',
+  },
+  promoBannerImage: {
+    width: '100%',
+    height: '100%',
   },
   heroCard: {
     borderRadius: 24,

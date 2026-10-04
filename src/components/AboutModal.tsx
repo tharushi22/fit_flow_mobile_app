@@ -23,17 +23,17 @@ export default function AboutModal({ visible, onClose }: AboutModalProps) {
         </View>
 
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-          {/* Top Logo Icon */}
-          <View style={styles.iconCircle}>
+          {/* Official Banner Header */}
+          <View style={styles.bannerWrapper}>
             <Image
-              source={require('../../assets/images/logo.png')}
-              style={styles.logoImage}
-              resizeMode="contain"
+              source={require('../../assets/images/banner.png')}
+              style={styles.bannerImage}
+              resizeMode="cover"
             />
           </View>
 
           <Text style={styles.title}>FitFlow</Text>
-          <Text style={styles.sub}>Version 1.0.0 • Smart Fitness Companion</Text>
+          <Text style={styles.sub}>Version 1.0.1 • Smart Fitness Companion</Text>
 
           {/* Description Card */}
           <View style={styles.card}>
@@ -120,6 +120,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 10,
     alignItems: 'center',
+  },
+  bannerWrapper: {
+    width: '100%',
+    aspectRatio: 1080 / 500,
+    borderRadius: 20,
+    overflow: 'hidden',
+    marginBottom: 20,
+    backgroundColor: '#0B0F1A',
+    shadowColor: '#6C4CF5',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: '#1E293B',
+  },
+  bannerImage: {
+    width: '100%',
+    height: '100%',
   },
   iconCircle: {
     width: 84,
