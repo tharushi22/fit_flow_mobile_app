@@ -91,7 +91,6 @@ cd android
 
 ## 📄 Documentation & Reports
 
-- **Comprehensive Lab Report (DOCX)**: [`doc/IT3060_Lab06_FitFlow_Final_Report.docx`](doc/IT3060_Lab06_FitFlow_Final_Report.docx)
 - **Submission Portfolio (Markdown)**: [`LAB_REPORT_IT3060.md`](LAB_REPORT_IT3060.md)
 - **Privacy Policy**: [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md) | [`docs/privacy-policy.html`](docs/privacy-policy.html)
 - **Release Notes v1.0.1**: [`RELEASE_NOTES.md`](RELEASE_NOTES.md)
